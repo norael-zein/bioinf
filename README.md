@@ -1,9 +1,9 @@
 # Welcome to out bioinformatics project!
 ***
 
-We are the bioinfare &nbsp;&nbsp;&nbsp;\\  // <br />
-And we are really cool        ||   <br />
-Enjoy our beutiful work       ||
+We are the bioinfare &nbsp;&nbsp;&nbsp;\\\  // <br />
+And we are really cool &nbsp;&nbsp;&nbsp||   <br />
+Enjoy our beutiful work &nbsp;&nbsp;&nbsp||
 
 
 Task list
