@@ -1,7 +1,7 @@
 # Welcome to out bioinformatics project!
 ***
 
-We are the bioinfare &nbsp;\\  // <br />
+We are the bioinfare &nbsp;&nbsp;&nbsp;\\  // <br />
 And we are really cool        ||   <br />
 Enjoy our beutiful work       ||
 
