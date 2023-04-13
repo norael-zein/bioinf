@@ -3,7 +3,7 @@
 
 We are the bioinfare &emsp; &emsp;\\\  // <br />
 And we are really cool &emsp; &emsp;||   <br />
-Enjoy our beutiful work &emsp;||
+Enjoy our beutiful work &emsp; &nbsp;||
 
 
 Task list
