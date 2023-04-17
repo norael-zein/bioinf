@@ -2,9 +2,9 @@ import pandas as pd
 import sys
 
 input_file = sys.argv[1]
-df = pd.read_csv(input_file)
-df_new = df.drop(df.columns[[0,1,2,3,4,5,6,7,8,9,10,11,12]], axis=1)
-print(df_new.apply(pd.Series.value_counts))
+raw_df = pd.read_csv(input_file)
+df = raw_df.drop(raw_df.columns[[0,1,2,3,4,5,6,7,8,9,10,11,12]], axis=1)
+print(df.apply(pd.Series.value_counts))
 
 
 frequencies = {}
