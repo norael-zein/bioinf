@@ -3,6 +3,9 @@ import sys
 
 input_file = sys.argv[1]
 df = pd.read_csv(input_file)
+df_new = df.drop(df.columns[[0,1,2,3,4,5,6,7,8,9,10,11,12]], axis=1)
+print(df_new.apply(pd.Series.value_counts))
+
 
 frequencies = {}
 aminoacids = {"A":0, "R":0, "N":0, "D":0, "C":0,
@@ -13,5 +16,7 @@ aminoacids = {"A":0, "R":0, "N":0, "D":0, "C":0,
 positions = list(df.columns[13:])
 for pos in positions:
     frequencies[pos] = aminoacids
+
+bajs = df[[positions[0]]].value_counts()#print(bajs.keys())
 
 
