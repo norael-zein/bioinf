@@ -14,9 +14,7 @@ Task list
 - [ ] Optimize script
 
 
-<<<<<<< HEAD
-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
-skit på dig
+Korv med brod
 =======
 bajsmacka
 >>>>>>> 09546263c01bcdb729786418bae6b53cbaf30e9d
