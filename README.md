@@ -13,12 +13,4 @@ Task list
 - [ ] Annotate VHH_10000.fasta
 - [ ] Optimize script
 
-
-<<<<<<< HEAD
-Korv med brod
-=======
-skit på dig, din lilla råtta
->>>>>>> refs/remotes/origin/main
-=======
-bajsmacka
->>>>>>> 09546263c01bcdb729786418bae6b53cbaf30e9d
+bajs
