@@ -12,3 +12,6 @@ Task list
 - [ ] Develop script for sequence layout
 - [ ] Annotate VHH_10000.fasta
 - [ ] Optimize script
+
+
+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
