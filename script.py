@@ -14,9 +14,7 @@ for pos in positions:
         print(freq[pos][a])
 
 
-
 #print(freq.loc[:, "2"])
-
 
 
 frequencies = {}
