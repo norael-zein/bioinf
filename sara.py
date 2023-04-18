@@ -12,7 +12,6 @@ df_freq = df.apply(pd.Series.value_counts)
 positions = list(df_freq.columns[:])
 aminoacid = list(df_freq.index)
 
-print(df_freq.head())
 # Creation of a frequency dictionary from frequency DataFrame
 frequencies = {'Amino_acid':['Pos'+ pos for pos in positions]}
 for i, aa in enumerate(aminoacid):
@@ -21,31 +20,14 @@ for i, aa in enumerate(aminoacid):
     frequencies[aa] = list(df_freq.iloc[i,:])
 
 
-output_file = open('frequencies' + input_file, 'w')
+output_file = open('frequencies_' + input_file, 'w')
 for aa, freq in frequencies.items():
    output_file.write(aa +',')
    for f in freq:
-       output_file.write(f + ',')
+       if type(f) == str:
+           output_file.write(f + ',')
+       else:
+           if math.isnan(f):
+               f = 0
+           output_file.write(str(int(f)) + ',')
    output_file.write('\n')
-
-   
-
-
-
-#print(list(freq.iloc[0,:]))
-# # Creation of a frequency dictionary from frequency DataFrame
-# frequencies = {}
-# for pos in positions:
-#     frequencies[pos] = {"A":0, "R":0, "N":0, "D":0, "C":0,
-#                         "Q":0, "E":0, "G":0, "H":0, "I":0,
-#                         "L":0, "K":0, "M":0, "F":0, "P":0, 
-#                         "S":0, "T":0, "W":0, "Y":0, "V":0, "*":0}
-#     for aa in aminoacid:
-#         count = freq[pos][aa]
-#         if not math.isnan(count):
-#             if aa == '-':
-#                 frequencies[pos]['*'] += int(count)
-#             else:
-#                 frequencies[pos][aa] += int(count)
-
-# print(frequencies)
