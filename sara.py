@@ -2,7 +2,6 @@ import pandas as pd
 import sys
 import math
 
-
 input_file = sys.argv[1]
 
 raw = pd.read_csv(input_file)
