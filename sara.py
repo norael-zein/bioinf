@@ -12,6 +12,7 @@ df_freq = df.apply(pd.Series.value_counts)
 positions = list(df_freq.columns[:])
 aminoacid = list(df_freq.index)
 
+print(df_freq.head())
 # Creation of a frequency dictionary from frequency DataFrame
 frequencies = {'Amino_acid':['Pos'+ pos for pos in positions]}
 for i, aa in enumerate(aminoacid):
@@ -19,8 +20,9 @@ for i, aa in enumerate(aminoacid):
         aa = '*'
     frequencies[aa] = list(df_freq.iloc[i,:])
 
+
 output_file = open('frequencies' + input_file, 'w')
-for aa, freq in frequencies:
+for aa, freq in frequencies.items():
    output_file.write(aa +',')
    for f in freq:
        output_file.write(f + ',')
