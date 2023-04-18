@@ -1,10 +1,13 @@
+#Use python [script name] [file name] in the terminal to get the output of the script
 import pandas as pd
 import sys
 
+#Create the dataframe 
 input_file = sys.argv[1]
 raw_df = pd.read_csv(input_file)
 df = raw_df.drop(raw_df.columns[[0,1,2,3,4,5,6,7,8,9,10,11,12]], axis=1)
 
+#Calculate the frequency 
 freq = df.apply(pd.Series.value_counts)
 positions = list(freq.columns[:])
 aminoacid = list(freq.index)
