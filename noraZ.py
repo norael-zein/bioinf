@@ -1,15 +1,18 @@
 import pandas as pd
 import sys
 import math
+import time
+
+start_time = time.time()
 
 input_file = sys.argv[1]
 
 raw = pd.read_csv(input_file)
-df = raw.drop(raw.columns[[0,1,2,3,4,5,6,7,8,9,10,11,12]], axis=1)
+df = raw.drop(raw.columns[:13], axis=1)
 
 # Creation of a frequency DataFrame
 df_freq = df.apply(pd.Series.value_counts)
-positions = list(df_freq.columns[:])
+positions = list(df_freq.columns)
 aminoacid = list(df_freq.index)
 
 # Creation of a frequency dictionary from frequency DataFrame
@@ -31,3 +34,9 @@ for aa, freq in frequencies.items():
                f = 0
            output_file.write(str(int(f)) + ',')
    output_file.write('\n')
+
+end_time = time.time()
+tot_time = end_time - start_time
+print(f"Total time: {tot_time} seconds")
+
+

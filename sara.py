@@ -2,6 +2,7 @@ import pandas as pd
 import sys
 import math
 
+
 input_file = sys.argv[1]
 
 raw = pd.read_csv(input_file)
@@ -31,3 +32,4 @@ for aa, freq in frequencies.items():
                f = 0
            output_file.write(str(int(f)) + ',')
    output_file.write('\n')
+
