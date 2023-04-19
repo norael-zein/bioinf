@@ -7,7 +7,7 @@ start_time = time.time()
 
 input_file = sys.argv[1]
 
-raw = pd.read_csv(input_file)
+raw = pd.read_csv(input_file) 
 df = raw.drop(raw.columns[:13], axis=1)
 
 # Creation of a frequency DataFrame
@@ -23,17 +23,9 @@ for i, aa in enumerate(aminoacid):
     frequencies[aa] = list(df_freq.iloc[i,:])
 
 
-output_file = open('frequencies_' + input_file, 'w')
-for aa, freq in frequencies.items():
-   output_file.write(aa +',')
-   for f in freq:
-       if type(f) == str:
-           output_file.write(f + ',')
-       else:
-           if math.isnan(f):
-               f = 0
-           output_file.write(str(int(f)) + ',')
-   output_file.write('\n')
+with open(f'frequencies_{input_file}', 'w') as output_file:
+    lines = [f'{aa},' + ','.join([f if isinstance(f, str) else str(int(f)) if not math.isnan(f) else '0' for f in freq]) for aa, freq in frequencies.items()]
+    output_file.write('\n'.join(lines))
 
 end_time = time.time()
 tot_time = end_time - start_time
