@@ -20,10 +20,11 @@ frequencies = {'Amino_acid':['Pos'+ pos for pos in positions]}
 for i, aa in enumerate(aminoacid):
     if aa == '-':
         aa = '*'
-    frequencies[aa] = df_freq.iloc[i,:].astype(float).fillna(0).astype(int).tolist()  #converts the values from floats to int, filling any missing values with zeros. 
+    frequencies[aa] = df_freq.iloc[i,:].fillna(0).astype(int)
+    #converts the values from floats to int, filling any missing values with zeros. 
 
 with open(f'frequencies_{input_file}', 'w') as output_file:
-    lines = [f'{aa},' + ','.join([f if isinstance(f, str) else str(int(f)) for f in freq]) for aa, freq in frequencies.items()]
+    lines = [f'{aa},' + ','.join([f if isinstance(f, str) else str(f) for f in freq]) for aa, freq in frequencies.items()]
     output_file.write('\n'.join(lines))
 
 end_time = time.time()
