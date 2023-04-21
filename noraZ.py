@@ -29,4 +29,4 @@ with open(f'frequencies_{input_file}', 'w') as output_file:
 
 end_time = time.time()
 tot_time = end_time - start_time
-print(f"Total time: {tot_time} seconds")
+print(f"Total time: {tot_time} seconds") #Calculate time
