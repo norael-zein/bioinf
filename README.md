@@ -11,6 +11,6 @@ Task list
 - [x] Annotate VHH_100.fasta
 - [x] Develop script for sequence layout
 - [x] Annotate VHH_10000.fasta
-- [ ] Optimize script
+- [x] Optimize script
 
 bajs
