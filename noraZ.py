@@ -21,7 +21,7 @@ for i, aa in enumerate(aminoacid):
     if aa == '-':
         aa = '*'
     frequencies[aa] = df_freq.iloc[i,:].fillna(0).astype(int)
-    #converts the values from floats to int, filling any missing values with zeros. 
+    #converts the values to int, filling NaN values with zeros. 
 
 with open(f'frequencies_{input_file}', 'w') as output_file:
     lines = [f'{aa},' + ','.join([f if isinstance(f, str) else str(f) for f in freq]) for aa, freq in frequencies.items()]
