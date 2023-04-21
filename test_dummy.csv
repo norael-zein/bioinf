@@ -1,6 +1,6 @@
 Id,domain_no,hmm_species,chain_type,e-value,score,seqstart_index,seqend_index,identity_species,v_gene,v_identity,j_gene,j_identity,1,2,3,4,5,6
 PRJEB25673|ERR2447057,0,human,H,4.2e-43,137.5,0,122,,,0.00,,0.00,-,G,Q,L,V,E
-PRJNA642677|SRR12104911,0,human,H,1.2e-40,129.6,0,127,,,0.00,,0.00,-,L,Q,L,V,W
+PRJNA642677|SRR12104911,0,human,H,1.2e-40,129.6,0,127,,,0.00,,0.00,-,L,W,L,V,W
 PRJNA321369|SRR3544219,0,human,H,3.7e-55,176.5,0,118,,,0.00,,0.00,S,V,Q,L,V,E
 PRJNA321369|SRR3544217,0,human,H,2e-40,128.9,0,125,,,0.00,,0.00,-,V,Q,W,V,E
 PRJNA642677|SRR12104911,0,human,H,1.7e-47,151.7,0,113,,,0.00,,0.00,-,-,Q,L,V,E
