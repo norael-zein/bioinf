@@ -26,7 +26,7 @@ print(f"{len(df.index)} rows remaining") #Print the amount of long sequences
 print(f'Long sequences: {df}') #Print all long sequences
 print(f' List of short sequences: {parts}') #Print all short sequences from the dictionary 
 
-#Adding short sequences to a text file
+#Adding short sequences to a text file BEHÖVER FIXA RÄTT FORMAT PÅ NÅGOT SÄTT
 with open('testoutputNoraZ.txt', 'w') as f:
     # Iterate over the dictionary items and write them to the file
     for key, value in parts.items():
