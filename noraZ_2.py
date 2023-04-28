@@ -26,7 +26,7 @@ print(f"{len(df.index)} rows remaining") #Print the amount of long sequences
 print(f'Long sequences: {df}') #Print all long sequences
 print(f' List of short sequences: {parts}') #Print all short sequences from the dictionary 
 
-#Adding short sequences to a csv file BEHÖVER FIXA RÄTT FORMAT PÅ NÅGOT SÄTT
+#Adding short sequences to a csv file BEHÖVER FIXA RÄTT FORMAT PÅ NÅGOT SÄTT: Ta bokstaven i början av raden (0,1,2) som motsvarar raden och ta ut den mha pandas??
 with open('testoutputNoraZ.csv', 'w') as f:
     # Iterate over the dictionary items and write them to the file
     for key, value in parts.items():

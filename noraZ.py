@@ -18,8 +18,8 @@ aminoacid = list(df_freq.index)
 # Creation of a frequency dictionary from frequency DataFrame
 frequencies = {'Amino_acid':['Pos'+ pos for pos in positions]}
 for i, aa in enumerate(aminoacid):
-    if aa == '-':
-        aa = '*'
+ #   if aa == '-':
+  #      aa = '*'
     frequencies[aa] = df_freq.iloc[i,:].fillna(0).astype(int)
     #converts the values to int, filling NaN values with zeros. 
 
