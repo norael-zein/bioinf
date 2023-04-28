@@ -1,7 +1,5 @@
 import pandas as pd
 import sys
-from collections import OrderedDict
-import collections
 
 input_file = sys.argv[1]
 
