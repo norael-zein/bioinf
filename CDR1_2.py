@@ -30,4 +30,4 @@ print(f"{len(df.index)} rows remaining") #Print the amount of long sequences
 print(f'Long sequences are in total {len(df.index)} sequences and the sequences are: {df}') #Print all long sequences
 
 
-df.to_csv('Test_patentCDR1.csv', index = False) #Save our data in df to a csv file
+df.to_csv('Test_patentCDR2.csv', index = False) #Save our data in df to a csv file
