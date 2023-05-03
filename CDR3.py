@@ -5,9 +5,9 @@ import sys
 
 input_file = sys.argv[1]
 
-# df = pd.read_csv(input_file) 
-raw = pd.read_csv(input_file) 
-df = raw.drop(raw.columns[:13], axis=1)
+df = pd.read_csv(input_file) 
+#raw = pd.read_csv(input_file) 
+#df = raw.drop(raw.columns[:13], axis=1)
 
 # Determination of CDR3 length
 counter = {'A':1,'C':1,'D':1,'E':1,'F':1,'G':1,'H':1,
@@ -21,6 +21,7 @@ CDR3 = df.iloc[:,start:stop+1]
 CDR3 = CDR3.replace(counter)
 CDR3['CDR3_length'] = CDR3.sum(axis=1)          #sätt ihop denna o nästa rad
 df['CDR3_length'] = CDR3['CDR3_length']
+
 
 #-----------------------------------------------------------------
 # # Plot number of sequences depending on CDR3 length
@@ -49,17 +50,38 @@ df['CDR3_length'] = CDR3['CDR3_length']
 #-------------------------------------------------------------------
 # Different output files
 
+# # Rename the header
+# pos = list(df.columns)
+# pos.remove('CDR3_length')
+# dic = {}
+# for p in pos:
+#     dic[p] = 'Pos' + p
+
+# df.rename(columns=dic, inplace=True)
+
+# Creation of three separate dataframes
 threshold1 = 12
 threshold2 = 18
 
 short = df.loc[df['CDR3_length'] <= threshold1]
+short = short.drop(columns=['CDR3_length'])
+short.to_csv('CDR3_short.csv', index = False) #Save our data in df to a csv file
+#short = short.apply(pd.Series.value_counts)
+
 medium = df[ (df['CDR3_length'] > threshold1) & (df['CDR3_length'] <= threshold2)]
+medium =medium.drop(columns=['CDR3_length'])
+df.to_csv('CDR3_medium.csv', index = False) #Save our data in df to a csv file
+#medium = medium.apply(pd.Series.value_counts)
+
 long = df[ (df['CDR3_length'] > threshold2)]
+long = long.drop(columns=['CDR3_length'])
+df.to_csv('CDR3_long.csv', index = False) #Save our data in df to a csv file
+#long = long.apply(pd.Series.value_counts)
 
 
-print(short.head())
-print(medium.head())
-print(long.head())
+
+
+
 
 # # Creation of a frequency DataFrame, listing the columns as positions 
 # # and indexes as amino acids
