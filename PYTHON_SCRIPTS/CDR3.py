@@ -15,14 +15,11 @@ start = df.columns.get_loc('95')              # Start postion CDR3
 stop = df.columns.get_loc('102')              # Stop position CDR3
 
 CDR3 = df.iloc[:,start:stop+1]
+print(CDR3.head())
 CDR3_counter = df.iloc[:,start:stop+1]
 CDR3_counter = CDR3_counter.replace(counter)
 CDR3['CDR3_length'] = CDR3_counter.sum(axis=1)
-
-#CDR3['CDR3_length'] = CDR3_counter['CDR3_length']
-#CDR3['CDR3_length'] = CDR3_counter['CDR3_length']
-#CDR3['CDR3_length'] = CDR3_counter.sum(axis=1)
-#print(CDR3['CDR3_length'])
+print(CDR3.head())
 
 # # -------------------------------------------------
 # # ------------------- PLOTTING --------------------
@@ -74,23 +71,23 @@ CDR3['CDR3_length'] = CDR3_counter.sum(axis=1)
 # ----------------- OUTPUT FILES ------------------
 # -------------------------------------------------
 
-# threshold1 = 12         
-# threshold2 = 18
+threshold1 = 12         
+threshold2 = 18
 
-# # Shortest 
-# short = CDR3.loc[CDR3['CDR3_length'] <= threshold1]
-# short = short.drop(columns=['CDR3_length'])
-# short.to_csv('CDR3_short.csv', index = False) 
+# Shortest 
+short = CDR3.loc[CDR3['CDR3_length'] <= threshold1]
+short = short.drop(columns=['CDR3_length'])
+short.to_csv('CDR3_short.csv', index = False) 
 
-# # Medium
-# medium = CDR3[ (CDR3['CDR3_length'] > threshold1) & (CDR3['CDR3_length'] <= threshold2)]
-# medium = medium.drop(columns=['CDR3_length'])
-# medium.to_csv('CDR3_medium.csv', index = False) 
+# Medium
+medium = CDR3[ (CDR3['CDR3_length'] > threshold1) & (CDR3['CDR3_length'] <= threshold2)]
+medium = medium.drop(columns=['CDR3_length'])
+medium.to_csv('CDR3_medium.csv', index = False) 
 
-# # Long
-# long = CDR3[ (CDR3['CDR3_length'] > threshold2)]
-# long = long.drop(columns=['CDR3_length'])
-# long.to_csv('CDR3_long.csv', index = False) 
+# Long
+long = CDR3[ (CDR3['CDR3_length'] > threshold2)]
+long = long.drop(columns=['CDR3_length'])
+long.to_csv('CDR3_long.csv', index = False) 
 #######################################################
 # threshold1 = 12         
 # threshold2 = 18
