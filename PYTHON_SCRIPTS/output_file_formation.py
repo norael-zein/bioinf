@@ -23,6 +23,6 @@ for i, aa in enumerate(aminoacid):
     frequencies[aa] = df_freq.iloc[i,:].fillna(0).astype(int)
 
 # Creation of output file, adding the values in the right format
-with open(f'frequencies_{input_file}', 'w') as output_file:
+with open(f'frequencies_{input_file}_aa_occurrences', 'w') as output_file:
     lines = [f'{aa},' + ','.join([f if isinstance(f, str) else str(f) for f in freq]) for aa, freq in frequencies.items()]
     output_file.write('\n'.join(lines))
