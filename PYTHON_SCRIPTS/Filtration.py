@@ -4,8 +4,13 @@ import sys
 
 input_file = sys.argv[1]
 
+<<<<<<< HEAD
+
+df = pd.read_csv(input_file) 
+=======
 raw = pd.read_csv(input_file) 
 df = raw.drop(raw.columns[:13], axis=1)
+>>>>>>> 6b5c51035b5ddfce51f4f88a2120f2d36c0d11d7
 
 filter = {'103':'-'}
 
