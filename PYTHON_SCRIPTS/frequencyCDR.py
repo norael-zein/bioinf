@@ -7,7 +7,7 @@ input_file = sys.argv[1]
 
 # df = pd.read_csv(input_file) 
 raw = pd.read_csv(input_file) 
-df = raw.drop(raw.columns[:13], axis=1)
+df = raw.drop(raw.columns[:13], axis=1) #KOLLA OM DENNA VERKLIGEN BEHÖVS DÅ HEADERN HAR TAGITS BORT
 
 # Determination of CDR length
 counter = {'A':1,'C':1,'D':1,'E':1,'F':1,'G':1,'H':1,
