@@ -7,7 +7,11 @@ input_file = sys.argv[1]
 
 # Reading of the input file and dropping the first 13 columns 
 # (because irrelevant for the output file)
+<<<<<<< HEAD
 df = pd.read_csv(input_file) 
+=======
+df  = pd.read_csv(input_file) 
+>>>>>>> 1ccca15f9227f1d7f309f4a85bb3845bb4c93871
 #df = raw.drop(raw.columns[:13], axis=1)
 
 # Creation of a frequency DataFrame, listing the columns as positions 
