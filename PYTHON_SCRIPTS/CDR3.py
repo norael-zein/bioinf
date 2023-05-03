@@ -15,34 +15,38 @@ start = df.columns.get_loc('95')              # Start postion CDR3
 stop = df.columns.get_loc('102')              # Stop position CDR3
 
 CDR3 = df.iloc[:,start:stop+1]
-CDR3_counter = CDR3.replace(counter)
-#df['CDR3_length'] = CDR3.sum(axis=1)
+CDR3_counter = df.iloc[:,start:stop+1]
+CDR3_counter = CDR3_counter.replace(counter)
+
 CDR3['CDR3_length'] = CDR3_counter.sum(axis=1)
-# -------------------------------------------------
-# ------------------- PLOTTING --------------------
-# -------------------------------------------------
+#CDR3_counter['CDR3_length'] = CDR3_counter.sum(axis=1)
+#CDR3['CDR3_length'] = CDR3_counter['CDR3_length']
+print(CDR3['CDR3_length'])
+# # -------------------------------------------------
+# # ------------------- PLOTTING --------------------
+# # -------------------------------------------------
 
-min = CDR3['CDR3_length'].min()
-max = CDR3['CDR3_length'].max()
+# min = CDR3['CDR3_length'].min()
+# max = CDR3['CDR3_length'].max()
 
-length_range = [*range(min,max+1,1)]
-nr_sequences = []
-lengths = []
-for l in length_range:
-    part = CDR3.loc[CDR3['CDR3_length'] == l]
-    amount = len(part.index)
-    nr_sequences.append(amount)
-    lengths.append(l)
+# length_range = [*range(min,max+1,1)]
+# nr_sequences = []
+# lengths = []
+# for l in length_range:
+#     part = CDR3.loc[CDR3['CDR3_length'] == l]
+#     amount = len(part.index)
+#     nr_sequences.append(amount)
+#     lengths.append(l)
 
-sum = sum(nr_sequences)
-occurrences = [x/sum for x in nr_sequences]
+# sum = sum(nr_sequences)
+# occurrences = [x/sum for x in nr_sequences]
 
-plt.bar(lengths, occurrences)
-plt.title('CDR3 length')
-plt.xlabel('Number of amino acids')
-plt.ylabel('Occurrences (%)')
-plt.show()
-
+# plt.bar(lengths, occurrences)
+# plt.title('CDR3 length')
+# plt.xlabel('Number of amino acids')
+# plt.ylabel('Occurrences (%)')
+# plt.show()
+##########################################
 # min = df['CDR3_length'].min()
 # max = df['CDR3_length'].max()
 
@@ -68,24 +72,24 @@ plt.show()
 # ----------------- OUTPUT FILES ------------------
 # -------------------------------------------------
 
-threshold1 = 12         
-threshold2 = 18
+# threshold1 = 12         
+# threshold2 = 18
 
-# Shortest 
-short = CDR3.loc[CDR3['CDR3_length'] <= threshold1]
-short = short.drop(columns=['CDR3_length'])
-short.to_csv('CDR3_short.csv', index = False) 
+# # Shortest 
+# short = CDR3.loc[CDR3['CDR3_length'] <= threshold1]
+# short = short.drop(columns=['CDR3_length'])
+# short.to_csv('CDR3_short.csv', index = False) 
 
-# Medium
-medium = CDR3[ (CDR3['CDR3_length'] > threshold1) & (CDR3['CDR3_length'] <= threshold2)]
-medium = medium.drop(columns=['CDR3_length'])
-medium.to_csv('CDR3_medium.csv', index = False) 
+# # Medium
+# medium = CDR3[ (CDR3['CDR3_length'] > threshold1) & (CDR3['CDR3_length'] <= threshold2)]
+# medium = medium.drop(columns=['CDR3_length'])
+# medium.to_csv('CDR3_medium.csv', index = False) 
 
-# Long
-long = CDR3[ (CDR3['CDR3_length'] > threshold2)]
-long = long.drop(columns=['CDR3_length'])
-long.to_csv('CDR3_long.csv', index = False) 
-
+# # Long
+# long = CDR3[ (CDR3['CDR3_length'] > threshold2)]
+# long = long.drop(columns=['CDR3_length'])
+# long.to_csv('CDR3_long.csv', index = False) 
+#######################################################
 # threshold1 = 12         
 # threshold2 = 18
 

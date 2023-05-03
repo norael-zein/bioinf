@@ -7,8 +7,8 @@ input_file = sys.argv[1]
 
 # Reading of the input file and dropping the first 13 columns 
 # (because irrelevant for the output file)
-raw = pd.read_csv(input_file) 
-df = raw.drop(raw.columns[:13], axis=1)
+df = pd.read_csv(input_file) 
+#df = raw.drop(raw.columns[:13], axis=1)
 
 # Creation of a frequency DataFrame, listing the columns as positions 
 # and indexes as amino acids
