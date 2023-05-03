@@ -14,8 +14,8 @@ counter = {'A':1,'C':1,'D':1,'E':1,'F':1,'G':1,'H':1,
            'I':1,'K':1,'L':1,'M':1,'N':1,'P':1,'Q':1,
            'R':1,'S':1,'T':1,'V':1,'W':1,'Y':1,'-':0}
 
-start = df.columns.get_loc('50')
-stop = df.columns.get_loc('65')
+start = df.columns.get_loc(input("Enter a comma-separated list of positions: ") )
+stop = df.columns.get_loc(input("Enter a comma-separated list of positions: ") )
 
 CDR = df.iloc[:,start:stop+1]
 CDR = CDR.replace(counter)
@@ -43,5 +43,5 @@ occurrences = [x/sum for x in nr_sequences]
 plt.bar(lengths, occurrences)
 plt.title('CDR2 length')
 plt.xlabel('Number of amino acids')
-plt.ylabel('Percentage of sequences')
+plt.ylabel('Occurrences (%)')
 plt.show()

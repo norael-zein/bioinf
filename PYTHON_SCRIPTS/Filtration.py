@@ -4,6 +4,7 @@ import sys
 
 input_file = sys.argv[1]
 
+
 df = pd.read_csv(input_file) 
 
 filter = {'103':'-'}
