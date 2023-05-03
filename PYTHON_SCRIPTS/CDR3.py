@@ -77,25 +77,3 @@ long = df[ (df['CDR3_length'] > threshold2)]
 long = long.drop(columns=['CDR3_length'])
 df.to_csv('CDR3_long.csv', index = False) #Save our data in df to a csv file
 #long = long.apply(pd.Series.value_counts)
-
-
-
-
-
-
-# # Creation of a frequency DataFrame, listing the columns as positions 
-# # and indexes as amino acids
-# df_freq = df.apply(pd.Series.value_counts)
-# positions = list(df_freq.columns)
-# aminoacid = list(df_freq.index)
-
-# # Creation of a frequency dictionary from frequency DataFrame
-# frequencies = {'Amino_acid':['Pos'+ pos for pos in positions]}
-# for i, aa in enumerate(aminoacid):
-#     #Filling the NaN values with zeros and converts all values to integers
-#     frequencies[aa] = df_freq.iloc[i,:].fillna(0).astype(int)
-
-# # Creation of output file, adding the values in the right format
-# with open(f'frequencies_{input_file}', 'w') as output_file:
-#     lines = [f'{aa},' + ','.join([f if isinstance(f, str) else str(f) for f in freq]) for aa, freq in frequencies.items()]
-#     output_file.write('\n'.join(lines))
