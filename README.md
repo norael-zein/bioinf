@@ -1,4 +1,4 @@
-# Welcome to out bioinformatics project!
+# Welcome to our bioinformatics project!
 ***
 
 We are the bioinfare &emsp; &emsp;\\\ &nbsp;// <br />
