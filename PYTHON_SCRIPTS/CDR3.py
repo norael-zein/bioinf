@@ -6,27 +6,11 @@ import sys
 input_file = sys.argv[1]
 
 df = pd.read_csv(input_file) 
-#raw = pd.read_csv(input_file) 
-#df = raw.drop(raw.columns[:13], axis=1)
 
-# Determination of CDR3 length
-counter = {'A':1,'C':1,'D':1,'E':1,'F':1,'G':1,'H':1,
-           'I':1,'K':1,'L':1,'M':1,'N':1,'P':1,'Q':1,
-           'R':1,'S':1,'T':1,'V':1,'W':1,'Y':1,'-':0}
-
-start = df.columns.get_loc('95')
-stop = df.columns.get_loc('102')
-
-CDR3 = df.iloc[:,start:stop+1]
-CDR3 = CDR3.replace(counter)
-CDR3['CDR3_length'] = CDR3.sum(axis=1)          #sätt ihop denna o nästa rad
-df['CDR3_length'] = CDR3['CDR3_length']
-
-
-#-----------------------------------------------------------------
-# # Plot number of sequences depending on CDR3 length
-# min = 5
-# #min = df['CDR3_length'].min()
+# #
+# # Plotting
+# #
+# min = df['CDR3_length'].min()
 # max = df['CDR3_length'].max()
 
 # length_range = [*range(min,max+1,1)]
@@ -44,20 +28,13 @@ df['CDR3_length'] = CDR3['CDR3_length']
 # plt.bar(lengths, occurrences)
 # plt.title('CDR3 length')
 # plt.xlabel('Number of amino acids')
-# plt.ylabel('Number of sequences')
+# plt.ylabel('Occurrences (%)')
 # plt.show()
 
 #-------------------------------------------------------------------
 # Different output files
 
-# # Rename the header
-# pos = list(df.columns)
-# pos.remove('CDR3_length')
-# dic = {}
-# for p in pos:
-#     dic[p] = 'Pos' + p
 
-# df.rename(columns=dic, inplace=True)
 
 # Creation of three separate dataframes
 threshold1 = 12
