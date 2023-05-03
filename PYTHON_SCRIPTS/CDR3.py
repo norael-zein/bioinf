@@ -17,11 +17,13 @@ stop = df.columns.get_loc('102')              # Stop position CDR3
 CDR3 = df.iloc[:,start:stop+1]
 CDR3_counter = df.iloc[:,start:stop+1]
 CDR3_counter = CDR3_counter.replace(counter)
-
 CDR3['CDR3_length'] = CDR3_counter.sum(axis=1)
-#CDR3_counter['CDR3_length'] = CDR3_counter.sum(axis=1)
+
 #CDR3['CDR3_length'] = CDR3_counter['CDR3_length']
-print(CDR3['CDR3_length'])
+#CDR3['CDR3_length'] = CDR3_counter['CDR3_length']
+#CDR3['CDR3_length'] = CDR3_counter.sum(axis=1)
+#print(CDR3['CDR3_length'])
+
 # # -------------------------------------------------
 # # ------------------- PLOTTING --------------------
 # # -------------------------------------------------
