@@ -30,5 +30,6 @@ for pos in positions: #Iterates over selected positions
 print(f"{len(df.index)} rows remaining") #Print the amount of long sequences
 print(f'Long sequences are in total {len(df.index)} sequences and the sequences are: {df}') #Print all long sequences
 
-part.to_csv('1million_CDR2_short.csv', index = False) #SHORT SEQUENCES
-df.to_csv('1million_CDR2_long.csv', index = False) #LONG SEQUENCES
+part.to_csv('PATENT_CDR2_short.csv', index = False) #SHORT SEQUENCES
+df.to_csv('PATENT_CDR2_long.csv', index = False) #LONG SEQUENCES
+
