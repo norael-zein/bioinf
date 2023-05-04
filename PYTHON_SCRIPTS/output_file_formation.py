@@ -15,7 +15,7 @@ df  = pd.read_csv(input_file)
 df_freq = df.apply(pd.Series.value_counts)
 positions = list(df_freq.columns)
 aminoacid = list(df_freq.index)
-
+ 
 # Creation of a frequency dictionary from frequency DataFrame
 frequencies = {'Amino_acid':['Pos'+ pos for pos in positions]}
 for i, aa in enumerate(aminoacid):
