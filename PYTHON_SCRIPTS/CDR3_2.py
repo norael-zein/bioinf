@@ -1,13 +1,14 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import sys
+import numpy as np
 
 
 input_file = sys.argv[1]
 df = pd.read_csv(input_file) 
 
 # -------------------------------------------------
-# --------- DETERMINATION OF CDR3 LENGTH -----_----
+# --------- DETERMINATION OF CDR3 LENGTH ----------
 # -------------------------------------------------
 counter = {'A':1,'C':1,'D':1,'E':1,'F':1,'G':1,'H':1,
            'I':1,'K':1,'L':1,'M':1,'N':1,'P':1,'Q':1,
@@ -39,12 +40,17 @@ for l in length_range:
     lengths.append(l)
 
 sum = sum(nr_sequences)
-occurrences = [x/sum for x in nr_sequences]
+occurrences = [(x/sum)*100 for x in nr_sequences]
 
-
-plt.bar(lengths, occurrences)
-plt.title('CDR3 length distribution')
-plt.xlabel('Number of amino acids')
+fig = plt.figure(figsize = (10, 5))
+ 
+# creating the bar plot
+plt.bar(lengths, occurrences, color ='firebrick', width = 0.5)
+plt.xticks(np.arange(0, 31, step=1))
+plt.xlim([0, 30])
+#plt.bar(lengths, occurrences)
+plt.title('CDR3 length distribution', weight='bold', fontsize=16)
+plt.xlabel('CDR3 length (aa)')
 plt.ylabel('Occurrences (%)')
 plt.show()
 
