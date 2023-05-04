@@ -26,8 +26,9 @@ for pos in positions: #Iterates over selected positions
         df.drop(part.index, inplace=True) #Drops all rows from dataframe where the value in pos is equal to '-'
         print(f"{len(part.index)} rows dropped for position {pos}") #Print the amount of short sequences
 
+
 print(f"{len(df.index)} rows remaining") #Print the amount of long sequences
 print(f'Long sequences are in total {len(df.index)} sequences and the sequences are: {df}') #Print all long sequences
 
-part.to_csv('CDR1_short.csv', index = False) #SHORT SEQUENCES
-df.to_csv('CDR1_long.csv', index = False) #LONG SEQUENCES
+part.to_csv('1million_CDR2_short.csv', index = False) #SHORT SEQUENCES
+df.to_csv('1million_CDR2_long.csv', index = False) #LONG SEQUENCES

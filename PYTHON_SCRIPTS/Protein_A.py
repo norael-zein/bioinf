@@ -4,8 +4,8 @@ import sys
 
 input_file = sys.argv[1]
 
-raw = pd.read_csv(input_file) 
-df = raw.drop(raw.columns[:13], axis=1)
+df = pd.read_csv(input_file) 
+#df = raw.drop(raw.columns[:13], axis=1)
 
 tot_seq = len(df.index)
 
