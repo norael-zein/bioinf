@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import sys
+import numpy as np
 
 
 input_file = sys.argv[1]
@@ -24,9 +25,11 @@ df['CDR_length'] = CDR['CDR_length']
 
 #-----------------------------------------------------------------
 # Plot number of sequences depending on CDR3 length
-min = 5
+
 min = df['CDR_length'].min()
 max = df['CDR_length'].max()
+print(min)
+print(max)
 
 length_range = [*range(min,max+1,1)]
 nr_sequences = []
@@ -38,10 +41,13 @@ for l in length_range:
     lengths.append(l)
 
 sum = sum(nr_sequences)
-occurrences = [x/sum for x in nr_sequences]
+occurrences = [(x/sum)*100 for x in nr_sequences]
 
-plt.bar(lengths, occurrences)
-plt.title('CDR2 length')
-plt.xlabel('Number of amino acids')
+fig = plt.figure (figsize = (10,5))
+plt.bar(lengths, occurrences, color = 'firebrick', width = 0.5)
+plt.xticks(np.arange(0, 31, step=1))
+plt.xlim([0, 32])
+plt.title('CDR2 length distribution', weight='bold', fontsize = 16)
+plt.xlabel('CDR2 length (aa')
 plt.ylabel('Occurrences (%)')
 plt.show()

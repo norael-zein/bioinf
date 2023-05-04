@@ -25,6 +25,6 @@ for i, aa in enumerate(aminoacid):
 
 name = input_file.strip('.csv')
 # Creation of output file, adding the values in the right format
-with open(f'frequencies_{name}_aa_occurrences', 'w') as output_file:
+with open(f'frequencies_{name}_aa_occurrences.csv', 'w') as output_file:
     lines = [f'{aa},' + ','.join([f if isinstance(f, str) else str(f) for f in freq]) for aa, freq in frequencies.items()]
     output_file.write('\n'.join(lines))
