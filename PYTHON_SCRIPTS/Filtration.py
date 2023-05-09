@@ -4,7 +4,9 @@ import sys
 
 input_file = sys.argv[1]
 
-df = pd.read_csv(input_file) 
+raw = pd.read_csv(input_file) 
+df = raw.drop(raw.columns[:13], axis=1)
+
 
 filter = {'103':'-'}
 

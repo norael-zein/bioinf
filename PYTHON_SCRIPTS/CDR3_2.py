@@ -58,20 +58,20 @@ plt.show()
 # ----------------- OUTPUT FILES ------------------
 # -------------------------------------------------
 
-threshold1 = 14         
-threshold2 = 18
+threshold1 = 13         
+threshold2 = 19
 
 # Shortest 
 short = df.loc[df['CDR3_length'] < threshold1]
 short = short.drop(columns=['CDR3_length'])
-short.to_csv('CDR3_short.csv', index = False) 
+short.to_csv('CDR3_ngs_short.csv', index = False) 
 
 # Medium
 medium = df[ (df['CDR3_length'] >= threshold1) & (df['CDR3_length'] <= threshold2)]
 medium = medium.drop(columns=['CDR3_length'])
-medium.to_csv('CDR3_medium.csv', index = False) 
+medium.to_csv('CDR3_ngs_medium.csv', index = False) 
 
 # Long
 long = df[ (df['CDR3_length'] > threshold2)]
 long = long.drop(columns=['CDR3_length'])
-long.to_csv('CDR3_long.csv', index = False) 
+long.to_csv('CDR3_ngs_long.csv', index = False) 
