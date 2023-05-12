@@ -91,7 +91,7 @@ occurrences_3 = [(x/sum_3)*100 for x in nr_sequences_3]
 
 ###########################################################
 fig, (ax1, ax2, ax3) = plt.subplots(3, figsize=(10,20), sharex=True, sharey=True)
-fig.suptitle('CDR length distribution', weight='bold', fontsize=16)
+fig.suptitle('CDR length distribution for patent sequences', weight='bold', fontsize=16)
 
 ax1.bar(lengths_1, occurrences_1, color ='indianred', width = 0.5, label='CDR1')
 ax1.legend(loc='upper right')
