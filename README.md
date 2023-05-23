@@ -52,27 +52,46 @@ If the user answers "Yes" to the question regarding a graph of CDR1 length distr
 
 ## Splitting of the sequences
 --------------------------------------
-
+The sequences can be splitted into different categories depending on different criteria and different thresholds. 
 
 ### Splitting sequences into standard length and long length (threshold set to 4% amino acids)
 -----
+In the script, there is an option to split the sequences into two categories: standard length and long length, specifically for the CDR1 and CDR2 regions. The threshold used in this report for defining a "long" length was based on the amino acid frequency being under 4%.
 
-print('----CDR1----')
-CDR1_choice = input("Are you interested in splitting the sequences depending on CDR1 length? Answer Yes or No: ")
-print()
-print('----CDR2----')
-CDR2_choice = input("Are you interested in splitting the sequences depending on CDR2 length? Answer Yes or No: ")
-print()
-print('------------------')
-print('Splitting sequences into short length, standard length and long length depending on threshold')
-print('------------------')
-print()
-print('----CDR3----')
-CDR3_choice = input("Are you interested in splitting the sequences into three ranges depending on CDR3 length and a given threshold (next question)? Answer Yes or No: ")
-print()
-print('---Threshold---')
-CDR3_threshold_start= input("Enter a threshold between short and standard CDR3 length: ")
-CDR3_threshold_stop= input("Enter a threshold between standard and long CDR3 length: ")
+----CDR1----
+
+"Are you interested in splitting the sequences depending on CDR1 length? Answer Yes or No: "
+
+If the user chooses "Yes," the script will calculate the length of the CDR1 region for each sequence and classify them as either "standard length" or "long length" based on the provided threshold (4% amino acid frequency).
+
+----CDR2----
+
+"Are you interested in splitting the sequences depending on CDR2 length? Answer Yes or No: "
+
+Similarly, if the user selects "Yes," the script will analyze the length of the CDR2 region and categorize the sequences as "standard length" or "long length" based on the defined threshold.
+
+
+### Splitting sequences into short length, standard length and long length depending on threshold')
+-----
+In addition to splitting the sequences into standard and long lengths for CDR1 and CDR2, the script also provides an option to divide the sequences into three categories: short, standard, and long length for the CDR3 region. The threshold values to distinguish between these categories are determined by the user in a later question.
+
+----CDR3----
+
+"Are you interested in splitting the sequences into three ranges depending on CDR3 length and a given threshold (next question)? Answer Yes or No: "
+
+If the user selects "Yes," the script will calculate the length of the CDR3 region for each sequence. Subsequently, the script will ask the user to specify the threshold values to determine the boundaries between the short, standard, and long length categories.
+
+---Threshold---
+
+"Enter a threshold between short and standard CDR3 length: "
+
+After the user provides the threshold value, the script will assign each sequence to either the short or standard length category based on this threshold.
+
+"Enter a threshold between standard and long CDR3 length: "
+
+Similarly, the user will provide the threshold value, and the script will categorize the sequences accordingly.
+
+
 print()
 print('--------------------------------------')
 print('Histograms')
