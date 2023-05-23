@@ -32,16 +32,19 @@ CDR length distirbution - visualized in graphs
 The script provides the option to visualize the length distribution of all three complementarity-determining regions (CDRs) of the sequences in a single graph. By answering "Yes" to the question, the script will generate a graph that provides an overview of the CDR lengths and allows for comparisons and observations of variations and conservations in the length distribution among the CDRs.
 
 ----CDR1----
+
 "Are you interested in a graph of CDR1 length distribution? Answer Yes or No: "
 
 If the user answers "Yes" to the question regarding a graph of CDR1 length distribution, the script will generate a graph displaying the distribution of CDR1 lengths in the sequences. The script will also provide the percentage of the highest peak in the graph, which corresponds to the most common CDR1 lengths in the sequences. 
 
 ----CDR2----
+
 "Are you interested in a graph of CDR2 length distribution? Answer Yes or No: "
 
 If the user answers "Yes" to the question regarding a graph of CDR2 length distribution, the script will generate a graph displaying the distribution of CDR2 lengths in the sequences. The script will also provide the percentage of the highest peak in the graph, which corresponds to the most common CDR2 lengths in the sequences. 
 
 ----CDR3----
+
 "Are you interested in a graph of CDR3 length distribution? Answer Yes or No: "
 
 If the user answers "Yes" to the question regarding a graph of CDR1 length distribution, the script will generate a graph displaying the distribution of CDR1 lengths in the sequences. The script will also provide the percentage of the highest peak in the graph, which corresponds to the most common CDR1 lengths in the sequences. 
