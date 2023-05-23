@@ -5,7 +5,7 @@ The script "Splitting_Visualization.py" plays a crucial role in the bioinformati
 
 To run the script, simply enter the following command in the terminal:
 
-*python Splitting_Visualization.py <input_file.fasta> 
+*python Splitting_Visualization.py <input_file.fasta>*
 
 Once the script is initiated, users will be prompted with multiple questions that allow them to filter and select the desired results. By providing responses to these questions, users can tailor the output to their specific areas of interest. To ensure informed decision-making when running the script, the following explanation outlines the purpose of each question posed by the script.
 
