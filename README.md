@@ -49,15 +49,14 @@ If the user answers "Yes" to the question regarding a graph of CDR2 length distr
 
 If the user answers "Yes" to the question regarding a graph of CDR1 length distribution, the script will generate a graph displaying the distribution of CDR1 lengths in the sequences. The script will also provide the percentage of the highest peak in the graph, which corresponds to the most common CDR1 lengths in the sequences. 
 
-print()
-print('--------------------------------------')
-print('Splitting of the sequences')
-print('--------------------------------------')
-print()
-print('------------------')
-print("Splitting sequences into standard length and long length (threshold set to 4% amino acids)")
-print('------------------')
-print()
+
+Splitting of the sequences
+--------------------------------------
+
+
+Splitting sequences into standard length and long length (threshold set to 4% amino acids)
+-----
+
 print('----CDR1----')
 CDR1_choice = input("Are you interested in splitting the sequences depending on CDR1 length? Answer Yes or No: ")
 print()
