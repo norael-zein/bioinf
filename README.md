@@ -1,16 +1,6 @@
-# Welcome to our bioinformatics project!
+# Bioinformatic analysis about camelid sdAbs sequences - user manual
 ***
 
-We are the bioinfare &emsp; &emsp;\\\ &nbsp;// <br />
-And we are really cool &emsp; &emsp;||   <br />
-Enjoy our beutiful work &emsp; &ensp;||
+This script "Splitting_Visualization.py" is used in the bioinformatic analysis in our report "Camelid sdAbs". It gives the users different choices of which kind of results depending on the user's interest. The script takes an fasta file as input, this input file is generated from annotation in the program ANARCI (see different manual for how to annotate the sequences). From the annotation, a fasta file will be generated as output which then will be formated and splitted in different ways in this script. 
 
-
-Task list
-
-- [x] Annotate VHH_100.fasta
-- [x] Develop script for sequence layout
-- [x] Annotate VHH_10000.fasta
-- [x] Optimize script
-
-bajs
+To run this 
