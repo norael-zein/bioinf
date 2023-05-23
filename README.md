@@ -5,14 +5,14 @@ The script "Splitting_Visualization.py" plays a crucial role in the bioinformati
 
 To run the script, simply enter the following command in the terminal:
 
-python Splitting_Visualization.py <input_file.fasta>
+*python Splitting_Visualization.py <input_file.fasta> 
 
 Once the script is initiated, users will be prompted with multiple questions that allow them to filter and select the desired results. By providing responses to these questions, users can tailor the output to their specific areas of interest. To ensure informed decision-making when running the script, the following explanation outlines the purpose of each question posed by the script.
 
 
 ## Type of sequences
 --------------------------------------
-"What type of sequences contains the input file? Answer for example PATENT, NGS, etc: "
+**"What type of sequences contains the input file? Answer for example PATENT, NGS, etc: "
 
 The user will be prompted to specify the type of sequences contained in the input file. This allows for proper labeling of output files and graphs, particularly when making comparisons between different types of sequences analyzed in the report. If the type of sequence is unknown or not applicable, the field can be left blank by entering a space (" ").
 
