@@ -4,7 +4,8 @@
 This script "Splitting_Visualization.py" is used in the bioinformatic analysis in our report "Camelid sdAbs". It gives the users different choices of which kind of results depending on the user's interest. The script takes an fasta file as input, this input file is generated from annotation in the program ANARCI (see different manual for how to annotate the sequences). From the annotation, a fasta file will be generated as output which then will be formated and splitted in different ways in this script. 
 
 To run this script, run the following command in the terminal: 
-  python Splitting_Visualization.py <input_file.fasta>
+
+# python Splitting_Visualization.py <input_file.fasta>
 
 After running the script, the user will be asked multiple questions which will filter the results that is of interest for the user. Below follows an explanation of the questions asked from the script, so that the user can make a qualified decision when running the script: 
 
