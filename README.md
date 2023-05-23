@@ -10,21 +10,21 @@ python Splitting_Visualization.py <input_file.fasta>
 Once the script is initiated, users will be prompted with multiple questions that allow them to filter and select the desired results. By providing responses to these questions, users can tailor the output to their specific areas of interest. To ensure informed decision-making when running the script, the following explanation outlines the purpose of each question posed by the script.
 
 
-##Type of sequences
+## Type of sequences
 --------------------------------------
 "What type of sequences contains the input file? Answer for example PATENT, NGS, etc: "
 
 The user will be prompted to specify the type of sequences contained in the input file. This allows for proper labeling of output files and graphs, particularly when making comparisons between different types of sequences analyzed in the report. If the type of sequence is unknown or not applicable, the field can be left blank by entering a space (" ").
 
 
-##Filtration
+## Filtration
 --------------------------------------
 "Are you interested in filtering the sequences? Answer Yes or No: "
 
 During the running of the script, the user will be given the option to filter the sequences based on specific criteria. In this case, the sequences will be filtered based on the requirements of the presence of an amino acid at position 103 and the inclusion of the last framework region (FR4). Sequences that do not meet these criteria, can indicate that they are too short and potentially unreliable for analysis. The script will prompt the user with the question of whether they would like to remove such sequences that do not fulfill the requirements.
 
 --------------------------------------
-##CDR length distirbution - visualized in graphs
+## CDR length distirbution - visualized in graphs
 -------------------------------------- 
 
 "Are you interested in visulizing all three CDRs in one graph? Answer Yes or No: "
@@ -50,11 +50,11 @@ If the user answers "Yes" to the question regarding a graph of CDR2 length distr
 If the user answers "Yes" to the question regarding a graph of CDR1 length distribution, the script will generate a graph displaying the distribution of CDR1 lengths in the sequences. The script will also provide the percentage of the highest peak in the graph, which corresponds to the most common CDR1 lengths in the sequences. 
 
 
-##Splitting of the sequences
+## Splitting of the sequences
 --------------------------------------
 
 
-###Splitting sequences into standard length and long length (threshold set to 4% amino acids)
+### Splitting sequences into standard length and long length (threshold set to 4% amino acids)
 -----
 
 print('----CDR1----')
