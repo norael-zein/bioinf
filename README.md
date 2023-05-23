@@ -92,19 +92,21 @@ After the user provides the threshold value, the script will assign each sequenc
 Similarly, the user will provide the threshold value, and the script will categorize the sequences accordingly.
 
 
-print()
-print('--------------------------------------')
-print('Histograms')
-print('--------------------------------------')
-print()
-histogram_choice = input("Are you interested in doing histograms of the data? Answer Yes or No: ")
-print()
-print('--------------------------------------')
-print('Protein A motif')
-print('--------------------------------------')
-protein_A_choice = input("Are you interested in knowing the statistics of Protein A motif in the sequences? Answer Yes or No: ")
-print()
-print('===============================================================================================')
+
+## Histograms
+--------------------------------------
+"Are you interested in doing histograms of the data? Answer Yes or No: "
+
+If the user selects "Yes" to the question, the script will generate the necessary files in the correct format for generating histograms using an R-script. The output file will be named "aa_occurrences.csv," which is the required input file format for the R-script mentioned in the report.
+.
+
+## Protein A motif
+--------------------------------------
+If the user is interested in analyzing the presence of Protein A motifs in the sequences, the script can provide relevant statistics. It can calculate the percentage of sequences that meet the overall requirements for the total Protein A motif, as specified in the report. Additionally, the script can determine the percentage of sequences that exhibit alternative amino acids at position 57 within the Protein A motif. It identifies the two possible alternative amino acids at that position and determines which one has the higher percentage of sequences associated with it. 
+
+"Are you interested in knowing the statistics of Protein A motif in the sequences? Answer Yes or No: "
+
+If the user answers "Yes" to the question regarding Protein A motif statistics, the script will generate the relevant statistics for the Protein A motifs present in the sequences.
 
 
 
