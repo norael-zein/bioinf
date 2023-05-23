@@ -1,15 +1,15 @@
 # User manual to the bioinformatic analysis about camelid sdAbs sequences
 ***
 
-This script "Splitting_Visualization.py" is used in the bioinformatic analysis in our report "Camelid sdAbs". It gives the users different choices of which kind of results depending on the user's interest. The script takes an fasta file as input, this input file is generated from annotation in the program ANARCI (see different manual for how to annotate the sequences). From the annotation, a fasta file will be generated as output which then will be formated and splitted in different ways in this script. 
+The script "Splitting_Visualization.py" plays a crucial role in the bioinformatic analysis presented in our report titled "Camelid sdAbs." It offers users various options to choose from based on their specific interests. The script operates by taking a fasta file as input, which is generated through the annotation process in ANARCI (refer to the respective manual for guidance on annotating sequences). The output of the annotation is then formatted and split in different ways using this script.
 
-To run this script, run the following command in the terminal: 
+To run the script, simply enter the following command in the terminal:
 
 python Splitting_Visualization.py <input_file.fasta>
 
-After running the script, the user will be asked multiple questions which will filter the results that is of interest for the user. Below follows an explanation of the questions asked from the script, so that the user can make a qualified decision when running the script: 
+Once the script is initiated, users will be prompted with multiple questions that allow them to filter and select the desired results. By providing responses to these questions, users can tailor the output to their specific areas of interest. To ensure informed decision-making when running the script, the following explanation outlines the purpose of each question posed by the script.
 
---------------------------------------
+
 Type of sequences
 --------------------------------------
 "What type of sequences contains the input file? Answer for example PATENT, NGS, etc: "
