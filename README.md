@@ -76,12 +76,6 @@ Similarly, the user will provide the threshold value, and the script will catego
 ## CDR length distirbution - visualized in graphs
 -------------------------------------- 
 
-----Overview----
-
-**"Are you interested in visualizing all three CDRs in one graph? Answer Yes or No: "**
-
-The script provides the option to visualize the length distribution of all three complementarity-determining regions (CDRs) of the sequences in a single graph. By answering "Yes" to the question, the script will generate a graph that provides an overview of the CDR lengths and allows for comparisons and observations of variations and conservations in the length distribution among the CDRs.
-
 ----CDR1----
 
 **"Are you interested in a graph of CDR1 length distribution? Answer Yes or No: "**
@@ -99,6 +93,13 @@ If the user answers "Yes" to the question regarding a graph of CDR2 length distr
 **"Are you interested in a graph of CDR3 length distribution? Answer Yes or No: "**
 
 If the user answers "Yes" to the question regarding a graph of CDR1 length distribution, the script will generate a graph displaying the distribution of CDR1 lengths in the sequences. The script will also provide the percentage of the highest peak in the graph, which corresponds to the most common CDR1 lengths in the sequences. 
+
+----Overview----
+
+**"Are you interested in visualizing all three CDRs in one graph? Answer Yes or No: "**
+
+The script provides the option to visualize the length distribution of all three complementarity-determining regions (CDRs) of the sequences in a single graph. By answering "Yes" to the question, the script will generate a graph that provides an overview of the CDR lengths and allows for comparisons and observations of variations and conservations in the length distribution among the CDRs.
+
 
 
 ## Protein A motif
