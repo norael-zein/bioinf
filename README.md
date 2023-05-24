@@ -78,7 +78,7 @@ Similarly, the user will provide the threshold value, and the script will catego
 
 ----Overview----
 
-**"Are you interested in visulizing all three CDRs in one graph? Answer Yes or No: "**
+**"Are you interested in visualizing all three CDRs in one graph? Answer Yes or No: "**
 
 The script provides the option to visualize the length distribution of all three complementarity-determining regions (CDRs) of the sequences in a single graph. By answering "Yes" to the question, the script will generate a graph that provides an overview of the CDR lengths and allows for comparisons and observations of variations and conservations in the length distribution among the CDRs.
 
