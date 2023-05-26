@@ -5,7 +5,7 @@ The script "filtration_formation_visualization.py" plays a crucial role in the b
 
 To run the script, simply enter the following command in the terminal:
 
-*python filtration_formation_visualization.py <input_file.fasta>*
+*python filtration_formation_visualization.py <input_file.csv>*
 
 Once the script is initiated, users will be prompted with multiple questions that allow them to filter and select the desired results. By providing responses to these questions, users can tailor the output to their specific areas of interest. To ensure informed decision-making when running the script, the following explanation outlines the purpose of each question posed by the script.
 
