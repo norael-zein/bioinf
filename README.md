@@ -1,7 +1,7 @@
 # User manual to the bioinformatic analysis about camelid sdAbs sequences
 ***
 
-The script "filtration_formation_visualization.py" plays a crucial role in the bioinformatic analysis presented in our report titled "Camelid antibodies." It offers users various options to choose from based on their specific interests. The script operates by taking a fasta file as input, which is generated through the annotation process in ANARCI (refer to the respective manual for guidance on annotating sequences). The output of the annotation is then formatted and split in different ways using this script.
+The script "filtration_formation_visualization.py" plays a crucial role in the bioinformatic analysis presented in our report titled "Exploring the Potential of Camelid Single-Domain Antibodies: Structure, Properties and Diverse Applications in Therapeutics and Diagnostics" (2023). It offers users various options to choose from based on their specific interests. The script operates by taking a fasta file as input, which is generated through the annotation process in ANARCI (refer to the respective manual for guidance on annotating sequences). The output of the annotation is then formatted and split in different ways using this script.
 
 To run the script, simply enter the following command in the terminal:
 
